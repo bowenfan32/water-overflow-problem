@@ -8,11 +8,11 @@ public class PourSimulator {
     public void pour(int i, int j, double volume) {
         double remainder = 0;
         Glass firstGlass = new Glass();
-        if (volume < MAX_CAPACITY) {
-            firstGlass.setCurrentVolume(volume);
-        } else {
+        if (volume > MAX_CAPACITY) {
             firstGlass.setCurrentVolume(MAX_CAPACITY);
             remainder = volume - MAX_CAPACITY;
+        } else {
+            firstGlass.setCurrentVolume(volume);
         }
         glassMap.put(i, j, firstGlass);
 
