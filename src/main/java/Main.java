@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -8,10 +6,10 @@ public class Main {
         }
         int i = Integer.parseInt(args[0]);
         int j = Integer.parseInt(args[1]);
-        double volume = Double.parseDouble(args[2]);
+        double litre = Double.parseDouble(args[2]);
 
         PourSimulator simulator = new PourSimulator();
-        simulator.pour(0, 0, volume);
+        simulator.pour(0, 0, litre * 1000);
 
         Glass glass = simulator.glassMap.get(i, j);
         double glassVolume;
@@ -21,6 +19,6 @@ public class Main {
             glassVolume = glass.getCurrentVolume();
         }
         System.out.println("Glass " + i + "," + j + " has a volume of "
-                + glassVolume);
+                + glassVolume + " ml");
     }
 }

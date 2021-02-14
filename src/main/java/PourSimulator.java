@@ -3,7 +3,7 @@ import com.google.common.collect.HashBasedTable;
 public class PourSimulator {
 
     HashBasedTable<Integer, Integer, Glass> glassMap = HashBasedTable.create();
-    public static final double MAX_CAPACITY = 1;
+    private static final double MAX_CAPACITY = 250;
 
     public void pour(int i, int j, double volume) {
         double remainder = 0;
@@ -22,7 +22,7 @@ public class PourSimulator {
         }
     }
 
-    public void pourToSide(int i, int j, double volume) {
+    private void pourToSide(int i, int j, double volume) {
         double remainder = 0;
         Glass glass = new Glass();
 

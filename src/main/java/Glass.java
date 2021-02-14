@@ -1,6 +1,6 @@
 public class Glass {
 
-    public double currentVolume;
+    private double currentVolume;
 
     public double getCurrentVolume() {
         return currentVolume;
